@@ -15,6 +15,9 @@ function Tasks({ tasks, onTaskClick, onDeleteTaskClick }) {
   }
 
   return (
+    <>
+    {
+      tasks.length > 0 &&
     <ul className="space-y-4 p-6 bg-slate-200 rounded-md shadow">
       {tasks.map((task) => (
         <li key={task.id} className="flex gap-2">
@@ -37,6 +40,9 @@ function Tasks({ tasks, onTaskClick, onDeleteTaskClick }) {
         </li>
       ))}
     </ul>
+      }
+    </>
+    
   );
 }
 
